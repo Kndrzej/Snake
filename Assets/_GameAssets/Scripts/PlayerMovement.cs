@@ -13,6 +13,14 @@ public class PlayerMovement : MonoBehaviour
     {
         playerBody = PlayerBody.Instance;
     }
+    private void OnEnable()
+    {
+        ReversePlayerPowerUp.OnPlayerReverse += ChangeDirection;
+    }
+    private void OnDisable()
+    {
+        ReversePlayerPowerUp.OnPlayerReverse -= ChangeDirection;
+    }
     private void Update()
     {
         if (Input.GetKeyDown(buttonUp))
@@ -43,5 +51,12 @@ public class PlayerMovement : MonoBehaviour
             Mathf.Round(this.transform.position.y) + direction.y,
             0
         );
+    }
+    void ChangeDirection()
+    {
+        if (direction == Vector3.up) direction = Vector3.down;
+        else if (direction == Vector3.down) direction = Vector3.up;
+        else if (direction == Vector3.left) direction = Vector3.right;
+        else if (direction == Vector3.right) direction = Vector3.left;
     }
 }

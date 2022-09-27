@@ -22,6 +22,14 @@ public class PlayerBody : MonoBehaviour
             Instance = this;
         }
     }
+    private void OnEnable()
+    {
+        ReversePlayerPowerUp.OnPlayerReverse += ReversePlayer;
+    }
+    private void OnDisable()
+    {
+        ReversePlayerPowerUp.OnPlayerReverse -= ReversePlayer;
+    }
 
     public List<Transform> segments;
     [SerializeField] private Transform segmentPrefab;
@@ -51,6 +59,17 @@ public class PlayerBody : MonoBehaviour
         segments.Add(this.transform);
         this.transform.position = Vector3.zero;
     }
+    public void ReversePlayer()
+    {
+        var currentSegments = segments.Count;
+        for (int i = 1; i < segments.Count; i++) Destroy(segments[i].gameObject);
+        segments.Clear();
+        segments.Add(this.transform);
+        for (int i = 0; i < currentSegments-1; i++)
+        {
+            Grow();
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "PowerUp")
@@ -69,4 +88,5 @@ public class PlayerBody : MonoBehaviour
 
         }
     }
+
 }
