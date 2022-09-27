@@ -7,6 +7,8 @@ public class LongerPlayerPowerUp : PowerUp
     
     public override void Initialize(BoxCollider gridArea)
     {
+        this.gameObject.SetActive(true);
+
         Bounds bounds = gridArea.bounds;
         float x = Random.Range(bounds.min.x, bounds.max.x);
         float y = Random.Range(bounds.min.y, bounds.max.y);
@@ -16,6 +18,11 @@ public class LongerPlayerPowerUp : PowerUp
 
     public override void OnHit()
     {
-        throw new System.NotImplementedException();
+        this.gameObject.SetActive(false);
+        PlayerBody.Instance.Grow();
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        OnHit();
     }
 }

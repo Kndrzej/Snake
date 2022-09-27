@@ -8,7 +8,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private KeyCode buttonRight = KeyCode.D;
     
     private Vector3 direction = Vector3.right;
-    
+    private PlayerBody playerBody;
+    private void Start()
+    {
+        playerBody = PlayerBody.Instance;
+    }
     private void Update()
     {
         if (Input.GetKeyDown(buttonUp))
@@ -30,6 +34,10 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        for(int i = playerBody.segments.Count-1 ;i > 0; i--)
+        {
+            playerBody.segments[i].position = playerBody.segments[i - 1].position;
+        }
         this.transform.position = new Vector3(
             Mathf.Round(this.transform.position.x) + direction.x,
             Mathf.Round(this.transform.position.y) + direction.y,
