@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerBody : MonoBehaviour
 {
+    public delegate void PlayerCollisionAction();
+    public static event PlayerCollisionAction OnPlayerCollision;
+    public delegate void ResetGameAction();
+    public static event ResetGameAction OnGameReset;
     public static PlayerBody Instance { get; private set; }
     private void Awake()
     {
@@ -36,8 +40,8 @@ public class PlayerBody : MonoBehaviour
     {
         if (segments.Count > 1)
         {
-            Destroy(segments[segments.Count-1].gameObject);
-            segments.RemoveAt(segments.Count-1);
+            Destroy(segments[segments.Count - 1].gameObject);
+            segments.RemoveAt(segments.Count - 1);
         }
     }
     public void ResetGame()
@@ -49,9 +53,20 @@ public class PlayerBody : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag != "PowerUp")
+        if (other.tag == "PowerUp")
         {
+            OnPlayerCollision();
+
+        }
+        else if (other.tag == "Player")
+        {
+            OnGameReset();
             ResetGame();
+        }
+        else
+        {
+            Debug.Log("niewiem co to");
+
         }
     }
 }

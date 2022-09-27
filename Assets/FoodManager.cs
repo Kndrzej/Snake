@@ -10,6 +10,7 @@ public class FoodManager : MonoBehaviour
     void Start()
     {
         SpawnPowerUps();
+        gridArea.enabled = false;
     }
 
     public void SpawnPowerUps()
