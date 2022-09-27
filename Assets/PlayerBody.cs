@@ -32,6 +32,14 @@ public class PlayerBody : MonoBehaviour
         segment.position = segments[segments.Count - 1].position;
         segments.Add(segment);
     }
+    public void Shrink()
+    {
+        if (segments.Count > 1)
+        {
+            Destroy(segments[segments.Count-1].gameObject);
+            segments.RemoveAt(segments.Count-1);
+        }
+    }
     public void ResetGame()
     {
         for (int i = 1; i < segments.Count; i++) Destroy(segments[i].gameObject);
@@ -41,7 +49,7 @@ public class PlayerBody : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag != "PowerUp")
+        if (other.tag != "PowerUp")
         {
             ResetGame();
         }
