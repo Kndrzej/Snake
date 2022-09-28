@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: GameSettings
   m_EditorClassIdentifier: 
   gameSpeed: 0.04
-  powerUpRate: 1
-  powerUpProbability: 1
+  powerUpSpawnRate: 2
+  fppuNumber: 3
+  lppuNumber: 7
+  rppuNumber: 3
+  shppuNumber: 3
+  sppuNumber: 3

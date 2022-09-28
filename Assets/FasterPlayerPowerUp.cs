@@ -9,15 +9,15 @@ public class FasterPlayerPowerUp : PowerUp
     [SerializeField] private int boostTime = 2000;//in ms
     float currentSpeed;
 
-    public override void Initialize(BoxCollider gridArea)
+    public override void Initialize(float x, float y)
     {
         this.gameObject.SetActive(true);
 
-        Bounds bounds = gridArea.bounds;
-        float x = Random.Range(bounds.min.x, bounds.max.x);
-        float y = Random.Range(bounds.min.y, bounds.max.y);
 
-        this.transform.position = new Vector3(Mathf.Round(x), Mathf.Round(y), 0);
+        float randomX = Random.Range(-x, x);
+        float randomY = Random.Range(-y, y);
+
+        this.transform.position = new Vector3(Mathf.Round(randomX), Mathf.Round(randomY), 0);
     }
 
     public override void OnHit()
