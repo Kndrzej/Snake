@@ -3,22 +3,11 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 
-public class SlowerPlayerPowerUp : PowerUp
+public class FasterPlayerPowerUp : PowerUp
 {
     [SerializeField] private float boostStrength = 0.015f;// refresh rate
     [SerializeField] private int boostTime = 2000;//in ms
     float currentSpeed;
-
-    public override void Initialize(float x, float y)
-    {
-        this.gameObject.SetActive(true);
-
-       
-        float randomX = Random.Range(-x, x);
-        float randomY = Random.Range(-y, y);
-        
-        this.transform.position = new Vector3(Mathf.Round(randomX), Mathf.Round(randomY),0);
-    }
 
     public override void OnHit()
     {
@@ -32,7 +21,7 @@ public class SlowerPlayerPowerUp : PowerUp
     }
     private async void BoostPlayerSpeed()
     {
-        Time.fixedDeltaTime += boostStrength;
+        Time.fixedDeltaTime -= boostStrength;
         await Task.Delay(boostTime);
         Time.fixedDeltaTime = currentSpeed;
     }
