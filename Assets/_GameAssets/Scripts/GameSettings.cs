@@ -6,10 +6,8 @@ using UnityEngine;
 public class GameSettings : ScriptableObject
 {
     public float gameSpeed;
-    //public float powerUpRate;
-    //public float powerUpProbability;
     public int powerUpSpawnRate;
-    //fppu faster player power up etc. lppu,sppu,rppu,shppu shorter
+    //fppu faster player power up etc. lppu,sppu,rppu,shppu shorter player power up
     public int fppuNumber;
     public int lppuNumber;
     public int rppuNumber;

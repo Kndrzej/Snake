@@ -42,10 +42,12 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (this.transform.position.x > 30) this.transform.position = new Vector3(-29,this.transform.position.y,this.transform.position.z);
-        if (this.transform.position.x < -30) this.transform.position = new Vector3(31,this.transform.position.y,this.transform.position.z);
-        if (this.transform.position.y > 16) this.transform.position = new Vector3(this.transform.position.x,-16,this.transform.position.z);
+        //move player to other side of screen when going through border
+        if (this.transform.position.x > 30) this.transform.position = new Vector3(-29, this.transform.position.y, this.transform.position.z);
+        if (this.transform.position.x < -30) this.transform.position = new Vector3(31, this.transform.position.y, this.transform.position.z);
+        if (this.transform.position.y > 16) this.transform.position = new Vector3(this.transform.position.x, -16, this.transform.position.z);
         if (this.transform.position.y < -16) this.transform.position = new Vector3(this.transform.position.x, 15, this.transform.position.z);
+        //move player segments
         for (int i = playerBody.segments.Count - 1; i > 0; i--)
         {
             playerBody.segments[i].position = playerBody.segments[i - 1].position;

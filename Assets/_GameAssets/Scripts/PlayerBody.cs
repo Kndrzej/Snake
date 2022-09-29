@@ -10,9 +10,7 @@ public class PlayerBody : MonoBehaviour
     public static event ResetGameAction OnGameReset;
     public static PlayerBody Instance { get; private set; }
     private void Awake()
-    {
-        // If there is an instance, and it's not me, delete myself.
-
+    {    
         if (Instance != null && Instance != this)
         {
             Destroy(this);
@@ -81,11 +79,6 @@ public class PlayerBody : MonoBehaviour
         {
             OnGameReset();
             ResetGame();
-        }
-        else
-        {
-            Debug.Log("niewiem co to");
-
         }
     }
 
