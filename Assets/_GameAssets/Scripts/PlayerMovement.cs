@@ -23,19 +23,19 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(buttonUp))
+        if (Input.GetKeyDown(buttonUp) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             if (direction != Vector3.down) direction = Vector3.up;
         }
-        else if (Input.GetKeyDown(buttonDown))
+        else if (Input.GetKeyDown(buttonDown) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             if (direction != Vector3.up) direction = Vector3.down;
         }
-        else if (Input.GetKeyDown(buttonLeft))
+        else if (Input.GetKeyDown(buttonLeft) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             if (direction != Vector3.right) direction = Vector3.left;
         }
-        else if (Input.GetKeyDown(buttonRight))
+        else if (Input.GetKeyDown(buttonRight) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             if (direction != Vector3.left) direction = Vector3.right;
         }
