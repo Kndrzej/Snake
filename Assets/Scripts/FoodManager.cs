@@ -5,7 +5,7 @@ using UnityEngine;
 public class FoodManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] powerUpsPrefab = new GameObject[10];
-    [SerializeField] private List<PowerUp> powerUps = new List<PowerUp>();
+    [SerializeField] private List<GameObject> powerUps = new List<GameObject>();
     [SerializeField] private BoxCollider gridArea;
     [SerializeField] private GameSettings gameSettings;
     private int powerUpSpawnRate;
@@ -23,7 +23,7 @@ public class FoodManager : MonoBehaviour
         var powerUpsAmount = gameSettings.fppuNumber + gameSettings.shppuNumber + gameSettings.sppuNumber + gameSettings.rppuNumber + gameSettings.lppuNumber;
         SpawnPowerUpsFromGameSettings();
         //turn them off on start, we will turn them on later
-        foreach (PowerUp powerUp in powerUps)
+        foreach (GameObject powerUp in powerUps)
         {
             powerUp.gameObject.SetActive(false);
         }
@@ -34,34 +34,54 @@ public class FoodManager : MonoBehaviour
         //spawn faster 
         for (int i = 0; i < gameSettings.fppuNumber; i++)
         {
-            powerUps.Add(Instantiate(powerUpsPrefab[0]).GetComponent<PowerUp>());
+            powerUps.Add(Instantiate(powerUpsPrefab[0]));
         }
         //spawn slower
         for (int i = 0; i < gameSettings.sppuNumber; i++)
         {
-            powerUps.Add(Instantiate(powerUpsPrefab[1]).GetComponent<PowerUp>());
+            powerUps.Add(Instantiate(powerUpsPrefab[1]));
         }
         //spawn reverse
         for (int i = 0; i < gameSettings.rppuNumber; i++)
         {
-            powerUps.Add(Instantiate(powerUpsPrefab[2]).GetComponent<PowerUp>());
+            powerUps.Add(Instantiate(powerUpsPrefab[2]));
         }
         //spawn longer
         for (int i = 0; i < gameSettings.lppuNumber; i++)
         {
-            powerUps.Add(Instantiate(powerUpsPrefab[3]).GetComponent<PowerUp>());
+            powerUps.Add(Instantiate(powerUpsPrefab[3]));
         }
         //spawn shorter
         for (int i = 0; i < gameSettings.shppuNumber; i++)
         {
-            powerUps.Add(Instantiate(powerUpsPrefab[4]).GetComponent<PowerUp>());
+            powerUps.Add(Instantiate(powerUpsPrefab[4]));
         }
     }
 
     public void SpawnPowerUp(float x, float y)
     {
         var powerUp = Random.Range(0,powerUps.Count);
-        powerUps[powerUp].Initialize(x,y);
+        if (powerUps[powerUp].TryGetComponent<SlowerPlayerPowerUp>(out SlowerPlayerPowerUp slowerPlayerPowerUp))
+        {
+            slowerPlayerPowerUp.Initialize(x, y);
+        }
+        else if (powerUps[powerUp].TryGetComponent<ShorterPlayerPowerUp>(out ShorterPlayerPowerUp shorterPlayerPowerUp))
+        {
+            shorterPlayerPowerUp.Initialize(x, y);
+        }
+        else if (powerUps[powerUp].TryGetComponent<ReversePlayerPowerUp>(out ReversePlayerPowerUp reversePlayerPowerUp))
+        {
+            reversePlayerPowerUp.Initialize(x, y);
+        }
+        else if (powerUps[powerUp].TryGetComponent<FasterPlayerPowerUp>(out FasterPlayerPowerUp fasterPlayerPowerUp))
+        {
+            fasterPlayerPowerUp.Initialize(x, y);
+        }
+        else if (powerUps[powerUp].TryGetComponent<LongerPlayerPowerUp>(out LongerPlayerPowerUp longerPlayerPowerUp))
+        {
+            longerPlayerPowerUp.Initialize(x, y);
+        }
+
     }
     private void Update()
     {
