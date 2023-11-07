@@ -2,7 +2,7 @@ using UnityEngine;
 public abstract class PowerUp : MonoBehaviour
 {
     public delegate void PowerUpPickUp();
-    public PowerUpPickUp OnPowerUpPickUp;
+    public static event PowerUpPickUp OnPowerUpPickUp;
 
     public void Initialize(float x, float y) 
     {
@@ -13,6 +13,7 @@ public abstract class PowerUp : MonoBehaviour
     }
     public virtual void OnHit()
     {
+        OnPowerUpPickUp?.Invoke();
         this.gameObject.SetActive(false);
     }
 }
