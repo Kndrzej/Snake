@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip pickUpSound;
     private void OnEnable()
     {
        PowerUp.OnPowerUpPickUp += PlayPickUpSound;
@@ -15,6 +17,6 @@ public class AudioManager : MonoBehaviour
     }
     void PlayPickUpSound()
     {
-        Debug.Log("play sound");
+        audioSource.PlayOneShot(pickUpSound);
     }
 }
