@@ -6,7 +6,7 @@ public class LongerPlayerPowerUp : PowerUp
 {
     public override void OnHit()
     {
-        this.gameObject.SetActive(false);
+        base.OnHit();
         PlayerBody.Instance.Grow();
     }
     private void OnTriggerEnter(Collider other)

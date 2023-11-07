@@ -7,7 +7,7 @@ public class ShorterPlayerPowerUp : PowerUp
 
     public override void OnHit()
     {
-        this.gameObject.SetActive(false);
+        base.OnHit();
         PlayerBody.Instance.Shrink();
     }
     private void OnTriggerEnter(Collider other)

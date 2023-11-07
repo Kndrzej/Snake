@@ -10,8 +10,8 @@ public class ReversePlayerPowerUp : PowerUp
    
     public override void OnHit()
     {
+        base.OnHit();
         OnPlayerReverse();
-        this.gameObject.SetActive(false);
     }
     private void OnTriggerEnter(Collider other)
     {

@@ -11,9 +11,9 @@ public class FasterPlayerPowerUp : PowerUp
 
     public override void OnHit()
     {
+        base.OnHit();
         currentSpeed = Time.fixedDeltaTime;
         BoostPlayerSpeed();
-        this.gameObject.SetActive(false);
     }
     private void OnTriggerEnter(Collider other)
     {
