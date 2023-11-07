@@ -580,7 +580,6 @@ GameObject:
   - component: {fileID: 842683510}
   - component: {fileID: 842683513}
   - component: {fileID: 842683512}
-  - component: {fileID: 842683511}
   m_Layer: 5
   m_Name: ReversePlayerPowerUp
   m_TagString: Untagged
@@ -605,23 +604,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 515, y: -225}
+  m_AnchoredPosition: {x: 524, y: -225}
   m_SizeDelta: {x: 285.7087, y: 17.4041}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &842683511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 842683509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f9dc09659dff1f49ab4477a28c8b5ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 0
-  pointsForFood: 2
 --- !u!114 &842683512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -996,7 +981,6 @@ GameObject:
   - component: {fileID: 1256233071}
   - component: {fileID: 1256233074}
   - component: {fileID: 1256233073}
-  - component: {fileID: 1256233072}
   m_Layer: 5
   m_Name: LongerPlayerPowerUp
   m_TagString: Untagged
@@ -1021,23 +1005,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 515, y: -165}
+  m_AnchoredPosition: {x: 524, y: -165}
   m_SizeDelta: {x: 285.7087, y: 17.4041}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1256233072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1256233070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f9dc09659dff1f49ab4477a28c8b5ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 0
-  pointsForFood: 2
 --- !u!114 &1256233073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1178,7 +1148,6 @@ GameObject:
   - component: {fileID: 1544549222}
   - component: {fileID: 1544549225}
   - component: {fileID: 1544549224}
-  - component: {fileID: 1544549223}
   m_Layer: 5
   m_Name: ShorterPlayerPowerUp
   m_TagString: Untagged
@@ -1203,23 +1172,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 515, y: -180}
+  m_AnchoredPosition: {x: 524, y: -180}
   m_SizeDelta: {x: 285.7087, y: 17.4041}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1544549223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1544549221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f9dc09659dff1f49ab4477a28c8b5ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 0
-  pointsForFood: 2
 --- !u!114 &1544549224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1514,7 +1469,6 @@ GameObject:
   - component: {fileID: 1964957240}
   - component: {fileID: 1964957243}
   - component: {fileID: 1964957242}
-  - component: {fileID: 1964957241}
   m_Layer: 5
   m_Name: FasterPlayerPowerUp
   m_TagString: Untagged
@@ -1539,23 +1493,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 515, y: -210}
+  m_AnchoredPosition: {x: 524, y: -210}
   m_SizeDelta: {x: 285.7087, y: 17.4041}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1964957241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1964957239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f9dc09659dff1f49ab4477a28c8b5ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 0
-  pointsForFood: 2
 --- !u!114 &1964957242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1807,7 +1747,6 @@ GameObject:
   - component: {fileID: 2077290138}
   - component: {fileID: 2077290141}
   - component: {fileID: 2077290140}
-  - component: {fileID: 2077290139}
   m_Layer: 5
   m_Name: SlowerPlayerPowerUp
   m_TagString: Untagged
@@ -1832,23 +1771,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 515, y: -195}
+  m_AnchoredPosition: {x: 524, y: -195}
   m_SizeDelta: {x: 285.7087, y: 17.4041}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2077290139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2077290137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f9dc09659dff1f49ab4477a28c8b5ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 0
-  pointsForFood: 2
 --- !u!114 &2077290140
 MonoBehaviour:
   m_ObjectHideFlags: 0
