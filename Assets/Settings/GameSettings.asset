@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dea2a692bb3ffd4ea4a53c9bdefc94f, type: 3}
   m_Name: GameSettings
   m_EditorClassIdentifier: 
-  gameSpeed: 0.04
-  powerUpSpawnRate: 2
-  fppuNumber: 3
-  lppuNumber: 7
-  rppuNumber: 3
-  shppuNumber: 3
-  sppuNumber: 3
+  GameSpeed: 0.04
+  PowerUpSpawnRate: 2
+  FasterPlayerPowerUpNumber: 3
+  LongerPlayerPowerUpNumber: 7
+  ReversePlayerPowerUpNumber: 3
+  ShorterPlayerPowerUpNumber: 3
+  SlowerPlayerPowerUpNumber: 3
