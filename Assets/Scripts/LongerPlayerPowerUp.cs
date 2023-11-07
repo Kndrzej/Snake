@@ -9,8 +9,4 @@ public class LongerPlayerPowerUp : PowerUp
         base.OnHit();
         PlayerBody.Instance.Grow();
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        OnHit();
-    }
 }

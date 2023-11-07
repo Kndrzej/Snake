@@ -9,8 +9,4 @@ public class ShorterPlayerPowerUp : PowerUp
         base.OnHit();
         PlayerBody.Instance.Shrink();
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Player") OnHit();
-    }
 }

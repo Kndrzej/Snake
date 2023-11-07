@@ -15,10 +15,7 @@ public class SlowerPlayerPowerUp : PowerUp
         currentSpeed = Time.fixedDeltaTime;
         BoostPlayerSpeed();
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        OnHit();
-    }
+
     private async void BoostPlayerSpeed()
     {
         Time.fixedDeltaTime += boostStrength;

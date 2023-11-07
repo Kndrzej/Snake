@@ -7,15 +7,10 @@ public class ReversePlayerPowerUp : PowerUp
 {
     public delegate void ReversePlayerAction();
     public static event ReversePlayerAction OnPlayerReverse;
-   
+
     public override void OnHit()
     {
         base.OnHit();
         OnPlayerReverse();
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        OnHit();
-    }
-    
 }
