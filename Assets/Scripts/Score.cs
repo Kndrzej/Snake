@@ -5,7 +5,7 @@ using TMPro;
 
 public class Score : MonoBehaviour
 {
-    public int score = 0;
+    public int score = -1;
     [SerializeField] private int pointsForFood = 1;
     private TextMeshProUGUI text;
     private void OnEnable()

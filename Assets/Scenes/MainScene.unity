@@ -210,8 +210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9dc09659dff1f49ab4477a28c8b5ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
-  pointsForFood: 2
+  score: -1
+  pointsForFood: 1
 --- !u!114 &377566731
 MonoBehaviour:
   m_ObjectHideFlags: 0
