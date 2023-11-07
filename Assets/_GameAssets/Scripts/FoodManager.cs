@@ -12,6 +12,7 @@ public class FoodManager : MonoBehaviour
     private float timer = 0;
     private float gridAreaX;
     private float gridAreaY;
+
     void Start()
     {
         gridAreaX = gridArea.bounds.extents.x;
