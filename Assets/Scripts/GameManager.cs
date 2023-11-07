@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PlayerMovement playerMovement;
     public void Start()
     {
-        Time.fixedDeltaTime = gameSettings.gameSpeed;
+        Time.fixedDeltaTime = gameSettings.GameSpeed;
     }
     
 }

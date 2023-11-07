@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ShorterPlayerPowerUp : PowerUp
 {
-
     public override void OnHit()
     {
         base.OnHit();

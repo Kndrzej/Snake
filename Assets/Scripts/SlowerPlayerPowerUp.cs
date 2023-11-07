@@ -7,7 +7,7 @@ public class SlowerPlayerPowerUp : PowerUp
 {
     [SerializeField] private float boostStrength = 0.015f;// refresh rate
     [SerializeField] private int boostTime = 2000;//in ms
-    float currentSpeed;
+    private float currentSpeed;
 
     public override void OnHit()
     {
