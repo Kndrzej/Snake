@@ -9,7 +9,6 @@ A classic Snake game implemented in Unity using C#.
 ## Table of Contents
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Controls](#controls)
 - [Gameplay](#gameplay)
 - [Contributing](#contributing)
@@ -38,13 +37,10 @@ A classic Snake game implemented in Unity using C#.
 
 4.Run the game by clicking the play button.
 
-## Usage
-You can play the game with the following controls:
-
-Controls
+## Controls
 W, A, S, D or Arrow Keys: Control the direction of the snake.
 
-Gameplay
+## Gameplay
 Guide the snake to eat the food items that appear on the screen.
 The snake will get points with each food item consumed.
 Avoid colliding with your own body.
@@ -58,5 +54,6 @@ Create a new branch for your feature: git checkout -b feature-name.
 Implement your feature or bug fix.
 Commit and push your changes.
 Create a pull request with a detailed description of your changes.
-License
+
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
