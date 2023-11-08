@@ -13,11 +13,7 @@ public class LongerPlayerPowerUp : MonoBehaviour, IPowerUp
     }
     public void OnHit()
     {
-        this.gameObject.SetActive(false);
+        base.OnHit();
         PlayerBody.Instance.Grow();
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        OnHit();
     }
 }

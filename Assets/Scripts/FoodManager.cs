@@ -18,9 +18,9 @@ public class FoodManager : MonoBehaviour
         gridAreaX = gridArea.bounds.extents.x;
         gridAreaY = gridArea.bounds.extents.y;
         gridArea.enabled = false;
-        powerUpSpawnRate = gameSettings.powerUpSpawnRate;
+        powerUpSpawnRate = gameSettings.PowerUpSpawnRate;
         //if you create new powerup you must add it here to total value
-        var powerUpsAmount = gameSettings.fppuNumber + gameSettings.shppuNumber + gameSettings.sppuNumber + gameSettings.rppuNumber + gameSettings.lppuNumber;
+        var powerUpsAmount = gameSettings.FasterPlayerPowerUpNumber + gameSettings.SlowerPlayerPowerUpNumber + gameSettings.ShorterPlayerPowerUpNumber + gameSettings.ReversePlayerPowerUpNumber + gameSettings.LongerPlayerPowerUpNumber;
         SpawnPowerUpsFromGameSettings();
         //turn them off on start, we will turn them on later
         foreach (GameObject powerUp in powerUps)
@@ -32,27 +32,27 @@ public class FoodManager : MonoBehaviour
     private void SpawnPowerUpsFromGameSettings()
     {
         //spawn faster 
-        for (int i = 0; i < gameSettings.fppuNumber; i++)
+        for (int i = 0; i < gameSettings.FasterPlayerPowerUpNumber; i++)
         {
             powerUps.Add(Instantiate(powerUpsPrefab[0]));
         }
         //spawn slower
-        for (int i = 0; i < gameSettings.sppuNumber; i++)
+        for (int i = 0; i < gameSettings.SlowerPlayerPowerUpNumber; i++)
         {
             powerUps.Add(Instantiate(powerUpsPrefab[1]));
         }
         //spawn reverse
-        for (int i = 0; i < gameSettings.rppuNumber; i++)
+        for (int i = 0; i < gameSettings.ReversePlayerPowerUpNumber; i++)
         {
             powerUps.Add(Instantiate(powerUpsPrefab[2]));
         }
         //spawn longer
-        for (int i = 0; i < gameSettings.lppuNumber; i++)
+        for (int i = 0; i < gameSettings.LongerPlayerPowerUpNumber; i++)
         {
             powerUps.Add(Instantiate(powerUpsPrefab[3]));
         }
         //spawn shorter
-        for (int i = 0; i < gameSettings.shppuNumber; i++)
+        for (int i = 0; i < gameSettings.ShorterPlayerPowerUpNumber; i++)
         {
             powerUps.Add(Instantiate(powerUpsPrefab[4]));
         }

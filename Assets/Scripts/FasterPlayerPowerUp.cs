@@ -19,14 +19,11 @@ public class FasterPlayerPowerUp : MonoBehaviour, IPowerUp
 
     public void OnHit()
     {
+        base.OnHit();
         currentSpeed = Time.fixedDeltaTime;
         BoostPlayerSpeed();
-        this.gameObject.SetActive(false);
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        OnHit();
-    }
+
     private async void BoostPlayerSpeed()
     {
         Time.fixedDeltaTime -= boostStrength;

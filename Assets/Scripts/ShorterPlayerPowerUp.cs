@@ -2,23 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShorterPlayerPowerUp : MonoBehaviour, IPowerUp
+public class ShorterPlayerPowerUp : PowerUp
 {
-
-    public void Initialize(float x, float y)
+    public override void OnHit()
     {
-        this.gameObject.SetActive(true);
-        float randomX = Random.Range(-x, x);
-        float randomY = Random.Range(-y, y);
-        this.transform.position = new Vector3(Mathf.Round(randomX), Mathf.Round(randomY), 0);
-    }
-    public void OnHit()
-    {
-        this.gameObject.SetActive(false);
+        base.OnHit();
         PlayerBody.Instance.Shrink();
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Player") OnHit();
     }
 }

@@ -7,7 +7,7 @@ public class SlowerPlayerPowerUp : MonoBehaviour, IPowerUp
 {
     [SerializeField] private float boostStrength = 0.015f;// refresh rate
     [SerializeField] private int boostTime = 2000;//in ms
-    float currentSpeed;
+    private float currentSpeed;
 
     public void Initialize(float x, float y)
     {
@@ -18,14 +18,11 @@ public class SlowerPlayerPowerUp : MonoBehaviour, IPowerUp
     }
    public void OnHit()
     {
+        base.OnHit();
         currentSpeed = Time.fixedDeltaTime;
         BoostPlayerSpeed();
-        this.gameObject.SetActive(false);
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        OnHit();
-    }
+
     private async void BoostPlayerSpeed()
     {
         Time.fixedDeltaTime += boostStrength;
