@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dea2a692bb3ffd4ea4a53c9bdefc94f, type: 3}
   m_Name: GameSettings
   m_EditorClassIdentifier: 
-  GameSpeed: 0.04
+  GameSpeed: 0.06
   PowerUpSpawnRate: 2
   FasterPlayerPowerUpNumber: 3
   LongerPlayerPowerUpNumber: 7

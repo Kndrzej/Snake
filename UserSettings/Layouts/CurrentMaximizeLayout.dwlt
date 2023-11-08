@@ -86,7 +86,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -226,7 +226,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: bccbffff5cd1ffff94d2ffff548100007e81000098810000a0810000a4810000ac810000be810000d8810000
+      m_ExpandedIDs: dce3fffff0e6ffff26e7ffff28e8ffff42e8ffff5ce8ffff7ce8ffffcae9ffffe4e9fffffee9ffff1eeaffffc2ebfffffcecffff38fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -553,11 +553,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.029990794, y: -0.01649197, z: 0.00048999564, w: 0.9993796}
     speed: 2
-    m_Value: {x: -0.029990796, y: 0.01649197, z: -0.00048999564, w: -0.99937963}
+    m_Value: {x: 0.029991828, y: -0.016492538, z: 0.0004900125, w: 0.999414}
   m_Size:
     m_Target: 404.52356
     speed: 2
-    m_Value: 423.58487
+    m_Value: 404.52356
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -650,22 +650,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\kozin\OneDrive\Documents\GitHub\Snake
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1c810000
-    m_LastClickedID: 33052
-    m_ExpandedIDs: 000000001681000000ca9a3bffffff7f
+    m_SelectedIDs: 4c5b0000
+    m_LastClickedID: 23372
+    m_ExpandedIDs: 00000000365b0000385b00003a5b00004c5b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -693,7 +693,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001681000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000365b0000385b00003a5b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
